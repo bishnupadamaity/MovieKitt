@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieKitt</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="onlineLoader" ></div>
+<div class="offlineLoader" >
+    <div class="gifLoader"></div>
+    <h1 class="connect">You are offline ...</h1>
+</div>
+<div class="notFound">
+    <div class="notFound-box">
+        <h1>Movie Not Found !</h1>
+        <button onclick="notfound()">BACK</button>
+    </div>
+</div>
+
+    <div class="main">
+        <nav class="navbar">
+            <div class="icon">
+                <h2 class="logo">MovieKitt</h2>
+            </div>    
+        </nav>
+        <div class="line"></div>
+        <div class="form">
+            <form action="#" id="myForm" onsubmit="ProcessMovieRequest()">        
+                    <input 
+                        type="text" 
+                        for="Title" 
+                        placeholder="Title" 
+                        name="movie-name"
+                        id="movie-title"
+                        autocomplete="off"
+                        required
+                        oninvalid="this.setCustomValidity('Please fill movie name')"
+                    >
+                    <input 
+                        type="text" 
+                        for="Year" 
+                        placeholder="Year" 
+                        name="year" 
+                        id="released-year"
+                        autocomplete="off"
+                    >
+                    <button type="submit" id="fetch" >Search</button>
+            </form>
+            <div class="example">
+                <p>( Example: Title: Avengers, Year: 2012 )</p>
+            </div>
+        </div>
+        <div class="frame">
+            <div class="left">
+                <img src="./images/avengers.jpg" alt="" srcset="" id="movie-banner">
+            </div>
+            <div class="right">
+                    <div class="right-left"></div>
+                    <div class="right-right">
+                        <div class="details">
+                            <h2 class="Title">Title: </h2>
+                            <h2 class="Rating">Rating: </h2>
+                            <h2 class="Released">Released: </h2>
+                            <h2 class="Language">Language: </h2>
+                            <h2 class="Actors">Actors: </h2>
+                            <h2 class="Director">Director: </h2>
+                            <h2 class="Plot">Plot: </h2>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>
